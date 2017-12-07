@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		DCB03CC61FD85329001091BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CC51FD85329001091BA /* AppDelegate.m */; };
-		DCB03CC91FD85329001091BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CC81FD85329001091BA /* ViewController.m */; };
 		DCB03CCC1FD85329001091BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB03CCA1FD85329001091BA /* Main.storyboard */; };
 		DCB03CCE1FD85329001091BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCB03CCD1FD85329001091BA /* Assets.xcassets */; };
 		DCB03CD11FD85329001091BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB03CCF1FD85329001091BA /* LaunchScreen.storyboard */; };
 		DCB03CD41FD85329001091BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CD31FD85329001091BA /* main.m */; };
 		DCB03CDE1FD85329001091BA /* CoffeeShopsTaskAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CDD1FD85329001091BA /* CoffeeShopsTaskAppTests.m */; };
+		DCB03CED1FD98E9F001091BA /* SMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CEC1FD98E9F001091BA /* SMMainViewController.m */; };
+		DCB03CF11FD9956D001091BA /* SMShopsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CF01FD9956D001091BA /* SMShopsListViewController.m */; };
+		DCB03CF41FD99713001091BA /* SMCoffeeShopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CF31FD99713001091BA /* SMCoffeeShopViewCell.m */; };
+		DCB03CF71FD99A04001091BA /* SMDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CF61FD99A04001091BA /* SMDetailsViewController.m */; };
+		DCE4EC451FD9C43A00B2405D /* SMCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC441FD9C43A00B2405D /* SMCustomButton.m */; };
+		DCE4EC481FD9C7BC00B2405D /* SMReviewsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC471FD9C7BC00B2405D /* SMReviewsViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +35,6 @@
 		DCB03CC11FD85329001091BA /* CoffeeShopsTaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShopsTaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB03CC41FD85329001091BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DCB03CC51FD85329001091BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DCB03CC71FD85329001091BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DCB03CC81FD85329001091BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DCB03CCB1FD85329001091BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCB03CCD1FD85329001091BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCB03CD01FD85329001091BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +43,18 @@
 		DCB03CD91FD85329001091BA /* CoffeeShopsTaskAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopsTaskAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB03CDD1FD85329001091BA /* CoffeeShopsTaskAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeShopsTaskAppTests.m; sourceTree = "<group>"; };
 		DCB03CDF1FD85329001091BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCB03CEB1FD98E9F001091BA /* SMMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMMainViewController.h; sourceTree = "<group>"; };
+		DCB03CEC1FD98E9F001091BA /* SMMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMMainViewController.m; sourceTree = "<group>"; };
+		DCB03CEF1FD9956D001091BA /* SMShopsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMShopsListViewController.h; sourceTree = "<group>"; };
+		DCB03CF01FD9956D001091BA /* SMShopsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMShopsListViewController.m; sourceTree = "<group>"; };
+		DCB03CF21FD99713001091BA /* SMCoffeeShopViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMCoffeeShopViewCell.h; sourceTree = "<group>"; };
+		DCB03CF31FD99713001091BA /* SMCoffeeShopViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMCoffeeShopViewCell.m; sourceTree = "<group>"; };
+		DCB03CF51FD99A04001091BA /* SMDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMDetailsViewController.h; sourceTree = "<group>"; };
+		DCB03CF61FD99A04001091BA /* SMDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMDetailsViewController.m; sourceTree = "<group>"; };
+		DCE4EC431FD9C43A00B2405D /* SMCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMCustomButton.h; sourceTree = "<group>"; };
+		DCE4EC441FD9C43A00B2405D /* SMCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMCustomButton.m; sourceTree = "<group>"; };
+		DCE4EC461FD9C7BC00B2405D /* SMReviewsViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMReviewsViewCell.h; sourceTree = "<group>"; };
+		DCE4EC471FD9C7BC00B2405D /* SMReviewsViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMReviewsViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +96,11 @@
 		DCB03CC31FD85329001091BA /* CoffeeShopsTaskApp */ = {
 			isa = PBXGroup;
 			children = (
+				DCB03CEA1FD98E65001091BA /* Controllers */,
+				DCB03CE91FD98E61001091BA /* Views */,
+				DCB03CE81FD98E59001091BA /* Models */,
 				DCB03CC41FD85329001091BA /* AppDelegate.h */,
 				DCB03CC51FD85329001091BA /* AppDelegate.m */,
-				DCB03CC71FD85329001091BA /* ViewController.h */,
-				DCB03CC81FD85329001091BA /* ViewController.m */,
 				DCB03CCA1FD85329001091BA /* Main.storyboard */,
 				DCB03CCD1FD85329001091BA /* Assets.xcassets */,
 				DCB03CCF1FD85329001091BA /* LaunchScreen.storyboard */,
@@ -101,6 +117,39 @@
 				DCB03CDF1FD85329001091BA /* Info.plist */,
 			);
 			path = CoffeeShopsTaskAppTests;
+			sourceTree = "<group>";
+		};
+		DCB03CE81FD98E59001091BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DCB03CE91FD98E61001091BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCB03CF21FD99713001091BA /* SMCoffeeShopViewCell.h */,
+				DCB03CF31FD99713001091BA /* SMCoffeeShopViewCell.m */,
+				DCE4EC431FD9C43A00B2405D /* SMCustomButton.h */,
+				DCE4EC441FD9C43A00B2405D /* SMCustomButton.m */,
+				DCE4EC461FD9C7BC00B2405D /* SMReviewsViewCell.h */,
+				DCE4EC471FD9C7BC00B2405D /* SMReviewsViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DCB03CEA1FD98E65001091BA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCB03CEB1FD98E9F001091BA /* SMMainViewController.h */,
+				DCB03CEC1FD98E9F001091BA /* SMMainViewController.m */,
+				DCB03CEF1FD9956D001091BA /* SMShopsListViewController.h */,
+				DCB03CF01FD9956D001091BA /* SMShopsListViewController.m */,
+				DCB03CF51FD99A04001091BA /* SMDetailsViewController.h */,
+				DCB03CF61FD99A04001091BA /* SMDetailsViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCB03CC91FD85329001091BA /* ViewController.m in Sources */,
+				DCB03CED1FD98E9F001091BA /* SMMainViewController.m in Sources */,
+				DCB03CF71FD99A04001091BA /* SMDetailsViewController.m in Sources */,
+				DCB03CF41FD99713001091BA /* SMCoffeeShopViewCell.m in Sources */,
 				DCB03CD41FD85329001091BA /* main.m in Sources */,
+				DCB03CF11FD9956D001091BA /* SMShopsListViewController.m in Sources */,
+				DCE4EC451FD9C43A00B2405D /* SMCustomButton.m in Sources */,
+				DCE4EC481FD9C7BC00B2405D /* SMReviewsViewCell.m in Sources */,
 				DCB03CC61FD85329001091BA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
