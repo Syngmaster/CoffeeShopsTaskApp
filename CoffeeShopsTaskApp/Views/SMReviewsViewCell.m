@@ -7,13 +7,16 @@
 //
 
 #import "SMReviewsViewCell.h"
+#import "SMReviewModel.h"
 
 @implementation SMReviewsViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)configureCellWithDetails:(SMReviewModel *)model {
+    
+    self.reviewUserNameLabel.text = model.reviewUserName;
+    self.reviewDateLabel.text = model.reviewDate;
+    self.reviewBodyLabel.text = model.reviewTextBody;
+    
 }
-
 
 @end

@@ -7,14 +7,15 @@
 //
 
 #import "SMCoffeeShopViewCell.h"
+#import "SMCoffeeShopModel.h"
 
 @implementation SMCoffeeShopViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)configureCellWithShop:(SMCoffeeShopModel *)model {
+    
+    self.shopNameLabel.text = model.shopName;
+    self.shopAddressLabel.text = model.shopAddress;
+    
 }
-
-
 
 @end

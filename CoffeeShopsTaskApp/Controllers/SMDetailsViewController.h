@@ -8,15 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMCoffeeShopModel;
+
 @interface SMDetailsViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *coffeeImageView;
-@property (weak, nonatomic) IBOutlet UILabel *coffeeRatingLabel;
-@property (weak, nonatomic) IBOutlet UILabel *coffeePhoneNumberLabel;
-@property (weak, nonatomic) IBOutlet UILabel *coffeeWebsiteLabel;
-@property (weak, nonatomic) IBOutlet UILabel *coffeeAddressLabel;
+
+@property (strong, nonatomic) SMCoffeeShopModel *selectedShop;
+
+@property (weak, nonatomic) IBOutlet UIImageView *shopImageView;
+@property (weak, nonatomic) IBOutlet UILabel *shopRatingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shopPhoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shopWebsiteLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shopAddressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shopOpenTime;
 @property (weak, nonatomic) IBOutlet UITableView *reviewsTableView;
-- (IBAction)openHoursAction:(UIButton *)sender;
 
-
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

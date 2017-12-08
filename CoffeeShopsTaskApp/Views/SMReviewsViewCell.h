@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMReviewModel;
+
 @interface SMReviewsViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *reviewUserNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reviewDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reviewBodyLabel;
+
+- (void)configureCellWithDetails:(SMReviewModel *)model;
 
 @end

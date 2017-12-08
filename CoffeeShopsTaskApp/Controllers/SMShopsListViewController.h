@@ -10,4 +10,6 @@
 
 @interface SMShopsListViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @end

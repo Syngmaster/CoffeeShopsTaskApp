@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMCoffeeShopModel;
+
 @interface SMCoffeeShopViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shopAddressLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *shopImageView;
+
+- (void)configureCellWithShop:(SMCoffeeShopModel *)model;
 
 @end
