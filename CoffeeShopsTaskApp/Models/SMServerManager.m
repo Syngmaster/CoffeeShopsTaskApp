@@ -50,7 +50,7 @@
     return self;
 }
 
-- (void)getListOfCoffeeShopsOnComplete:(void(^)(NSArray *resultArray))completionHandler {
+- (void)getListOfCoffeeShopsOnComplete:(void(^)(NSArray *resultArray, NSError *error))completionHandler {
     
     NSString *paramURL = @"search?near=Cork&categoryId=4bf58dd8d48988d1e0931735&limit=50";
     NSString *resultURL = [NSString stringWithFormat:@"%@%@%@",self.baseURL,paramURL,self.tailURL];
@@ -67,17 +67,17 @@
             [array addObject:shop];
         }
         
-        completionHandler(array);
+        completionHandler(array, nil);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        completionHandler(nil);
+        completionHandler(nil, error);
         
     }];
     
 }
 
-- (void)getDetailsOfCoffeeShop:(NSString *)shopID onCompletion:(void (^)(SMCoffeeShopDetailsModel *shopDetails))completionHandler {
+- (void)getDetailsOfCoffeeShop:(NSString *)shopID onCompletion:(void (^)(SMCoffeeShopDetailsModel *shopDetails, NSError *error))completionHandler {
     
     NSString *resultURL = [NSString stringWithFormat:@"%@%@?%@",self.baseURL, shopID, self.tailURL];
     [self.manager GET:resultURL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -88,11 +88,11 @@
         
         SMCoffeeShopDetailsModel *shopDetails = [[SMCoffeeShopDetailsModel alloc] initWithDictionary:shopDictionary];
         
-        completionHandler(shopDetails);
+        completionHandler(shopDetails, nil);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        completionHandler(nil);
+        completionHandler(nil, error);
         
     }];
     

@@ -14,7 +14,7 @@
 
 + (SMServerManager *)sharedManager;
 
-- (void)getListOfCoffeeShopsOnComplete:(void(^)(NSArray *resultArray))completionHandler;
-- (void)getDetailsOfCoffeeShop:(NSString *)shopID onCompletion:(void (^)(SMCoffeeShopDetailsModel *shopDetails))completionHandler;
+- (void)getListOfCoffeeShopsOnComplete:(void(^)(NSArray *resultArray, NSError *error))completionHandler;
+- (void)getDetailsOfCoffeeShop:(NSString *)shopID onCompletion:(void (^)(SMCoffeeShopDetailsModel *shopDetails, NSError *error))completionHandler;
 
 @end

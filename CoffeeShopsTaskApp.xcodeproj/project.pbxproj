@@ -17,6 +17,8 @@
 		DCB03CF11FD9956D001091BA /* SMShopsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CF01FD9956D001091BA /* SMShopsListViewController.m */; };
 		DCB03CF41FD99713001091BA /* SMCoffeeShopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CF31FD99713001091BA /* SMCoffeeShopViewCell.m */; };
 		DCB03CF71FD99A04001091BA /* SMDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CF61FD99A04001091BA /* SMDetailsViewController.m */; };
+		DCC0B94A1FDB381A00257EE7 /* SMShopsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CF01FD9956D001091BA /* SMShopsListViewController.m */; };
+		DCC0B94B1FDB382100257EE7 /* SMDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB03CF61FD99A04001091BA /* SMDetailsViewController.m */; };
 		DCE4EC451FD9C43A00B2405D /* SMCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC441FD9C43A00B2405D /* SMCustomButton.m */; };
 		DCE4EC481FD9C7BC00B2405D /* SMReviewsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC471FD9C7BC00B2405D /* SMReviewsViewCell.m */; };
 		DCE4EC4B1FDAC52300B2405D /* SMServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC4A1FDAC52300B2405D /* SMServerManager.m */; };
@@ -29,6 +31,7 @@
 		DCE4EC631FDAD38C00B2405D /* SMCoffeeShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC621FDAD38C00B2405D /* SMCoffeeShopModel.m */; };
 		DCE4EC661FDAEF5900B2405D /* SMCoffeeShopDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC651FDAEF5900B2405D /* SMCoffeeShopDetailsModel.m */; };
 		DCE4EC691FDAF10900B2405D /* SMReviewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC681FDAF10900B2405D /* SMReviewModel.m */; };
+		DCE4EC6A1FDB1E9D00B2405D /* SMServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE4EC4A1FDAC52300B2405D /* SMServerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -347,7 +350,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE4EC6A1FDB1E9D00B2405D /* SMServerManager.m in Sources */,
+				DCC0B94B1FDB382100257EE7 /* SMDetailsViewController.m in Sources */,
 				DCB03CDE1FD85329001091BA /* CoffeeShopsTaskAppTests.m in Sources */,
+				DCC0B94A1FDB381A00257EE7 /* SMShopsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

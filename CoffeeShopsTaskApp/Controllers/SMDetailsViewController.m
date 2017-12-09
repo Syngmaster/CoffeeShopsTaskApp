@@ -43,7 +43,7 @@
     
     [self.activityIndicator startAnimating];
     
-    [[SMServerManager sharedManager] getDetailsOfCoffeeShop:self.selectedShop.shopID onCompletion:^(SMCoffeeShopDetailsModel *shopDetails) {
+    [[SMServerManager sharedManager] getDetailsOfCoffeeShop:self.selectedShop.shopID onCompletion:^(SMCoffeeShopDetailsModel *shopDetails, NSError *error) {
        
         [self.activityIndicator stopAnimating];
         [self.activityIndicator setHidesWhenStopped:YES];
@@ -52,7 +52,9 @@
             self.shopDetails = shopDetails;
             [self updateUIWithShopDetails:shopDetails];
             [self.reviewsTableView reloadData];
-        } else {
+        }
+        
+        if (error) {
             [self raiseNoInternetConnectionAlert];
         }
         
@@ -74,13 +76,13 @@
                                     shopDetails.shopWebsite ?
                                     shopDetails.shopWebsite : @"No website"];
     
-    [self loadImageFromURL:[NSURL URLWithString:shopDetails.shopPhotoURL] onCompletion:^(UIImage *image) {
+    [self loadImageAsynchronouslyFromURL:[NSURL URLWithString:shopDetails.shopPhotoURL] onCompletion:^(UIImage *image) {
         self.shopImageView.image = image ? image : [UIImage imageNamed:@"no_image_img.png"];
     }];
     
 }
 
-- (void)loadImageFromURL:(NSURL *)url onCompletion:(void(^)(UIImage *image))completionHandler {
+- (void)loadImageAsynchronouslyFromURL:(NSURL *)url onCompletion:(void(^)(UIImage *image))completionHandler {
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         

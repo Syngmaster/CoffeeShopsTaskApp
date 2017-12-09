@@ -80,7 +80,7 @@
         <!--Shops List View Controller-->
         <scene sceneID="b5u-4y-LBT">
             <objects>
-                <tableViewController id="jvX-1I-w8h" customClass="SMShopsListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SMShopsListViewController" id="jvX-1I-w8h" customClass="SMShopsListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dGM-Hu-kxE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,7 @@
         <!--Details View Controller-->
         <scene sceneID="SjU-VW-oDe">
             <objects>
-                <viewController id="4gO-oW-fsI" customClass="SMDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SMDetailsViewController" id="4gO-oW-fsI" customClass="SMDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BsO-6B-Dfd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,13 +224,13 @@
                                                         <rect key="frame" x="0.0" y="125.66666666666667" width="179.33333333333334" height="31.666666666666671"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="website_img" translatesAutoresizingMaskIntoConstraints="NO" id="mYe-n8-reV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="31.333333333333332" height="31.666666666666668"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="30.666666666666668" height="31.666666666666668"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="mYe-n8-reV" secondAttribute="height" multiplier="1:1" id="d2U-3t-sFN"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fK6-TL-kcW">
-                                                                <rect key="frame" x="41.333333333333343" y="0.0" width="138" height="31.666666666666668"/>
+                                                                <rect key="frame" x="40.666666666666657" y="0.0" width="138.66666666666666" height="31.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>

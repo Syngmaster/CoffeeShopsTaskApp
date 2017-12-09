@@ -39,7 +39,7 @@
     
     [self.activityIndicator startAnimating];
     
-    [[SMServerManager sharedManager] getListOfCoffeeShopsOnComplete:^(NSArray *array) {
+    [[SMServerManager sharedManager] getListOfCoffeeShopsOnComplete:^(NSArray *array, NSError *error) {
         
         [self.activityIndicator stopAnimating];
         [self.activityIndicator setHidesWhenStopped:YES];
@@ -47,7 +47,9 @@
         if (array) {
             self.arrayOfShops = array;
             [self.tableView reloadData];
-        } else {
+        }
+        
+        if (error) {
             [self raiseNoInternetConnectionAlert];
         }
 

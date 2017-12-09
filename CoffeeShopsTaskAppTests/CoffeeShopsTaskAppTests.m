@@ -7,8 +7,15 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "SMServerManager.h"
+#import "SMCoffeeShopModel.h"
+#import "SMDetailsViewController.h"
 
 @interface CoffeeShopsTaskAppTests : XCTestCase
+
+@property (strong, nonatomic) SMDetailsViewController *detailsVCUnderTest;
+@property (strong, nonatomic) SMServerManager *manager;
+@property (strong, nonatomic) NSString *mockShopID;
 
 @end
 
@@ -16,7 +23,20 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.manager = [SMServerManager sharedManager];
+    self.mockShopID = @"shopID";
+    
+    //*** setting up SMDetailsViewController
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    self.detailsVCUnderTest = [storyboard instantiateViewControllerWithIdentifier:@"SMDetailsViewController"];
+    NSDictionary *mockShopModelDict = @{@"id":@"shopID",@"name":@"shopName",@"formattedAddress":@"shopAddress"};
+    self.detailsVCUnderTest.selectedShop = [[SMCoffeeShopModel alloc] initWithDictionary:mockShopModelDict];
+    [self.detailsVCUnderTest loadView];
+    [self.detailsVCUnderTest viewDidLoad];
+    [self.detailsVCUnderTest viewDidAppear:YES];
+
 }
 
 - (void)tearDown {
@@ -24,9 +44,60 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testReviewsTableViewEstimatedHeightForRow {
+    XCTAssertEqual(self.detailsVCUnderTest.reviewsTableView.estimatedRowHeight, 60);
+}
+
+- (void)testDetailsViewControllerNavigationItemTitle {
+    XCTAssertNotNil(self.detailsVCUnderTest.navigationItem.title);
+}
+
+- (void)testServiceManagerReturnsSameInstance {
+    SMServerManager *newInstance = [SMServerManager sharedManager];
+    XCTAssertEqual(newInstance, self.manager);
+}
+
+- (void)testServerManagerGetListsMethodOutput {
+  
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Query timeout"];
+
+    [self.manager getListOfCoffeeShopsOnComplete:^(NSArray *resultArray, NSError *error) {
+        
+        if (resultArray) {
+            XCTAssertNil(error);
+        } else {
+            XCTAssertNil(resultArray);
+        }
+        
+        [expectation fulfill];
+
+    }];
+    
+    [self waitForExpectationsWithTimeout:30 handler:^(NSError *error) {
+        XCTAssertNil(error);
+    }];
+    
+}
+
+- (void)testServerManagerDetailsMethodOutput {
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Query timeout"];
+
+    [self.manager getDetailsOfCoffeeShop:self.mockShopID onCompletion:^(SMCoffeeShopDetailsModel *shopDetails, NSError *error) {
+        
+        if (shopDetails) {
+            XCTAssertNil(error);
+        } else {
+            XCTAssertNil(shopDetails);
+        }
+        [expectation fulfill];
+
+    }];
+    
+    [self waitForExpectationsWithTimeout:30 handler:^(NSError *error) {
+        XCTAssertNil(error);
+    }];
+    
 }
 
 - (void)testPerformanceExample {
